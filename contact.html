@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="stylesheet" href="css/utils.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <title  class="lang" Key="contactTitle">Hotel Madeira | Contactanos</title>
+  <title  class="lang-text" Key="contactTitle">Hotel Madeira | Contactanos</title>
 </head>
 
 <body>
@@ -40,7 +40,7 @@
 
     <!-- Map -->
 
-    <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-74.74318742752077%2C5.89128827632876%2C-74.72108602523805%2C5.908918422675474&amp;layer=cyclemap&amp;marker=5.900103419579056%2C-74.7321367263794" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=5.9001&amp;mlon=-74.7321#map=16/5.9001/-74.7321&amp;layers=C">View Larger Map</a></small>
+    <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-74.74318742752077%2C5.89128827632876%2C-74.72108602523805%2C5.908918422675474&amp;layer=cyclemap&amp;marker=5.900103419579056%2C-74.7321367263794" style="border: 1px solid black"></iframe><br/><small><a class="lang-text" key="largeMap" href="https://www.openstreetmap.org/?mlat=5.9001&amp;mlon=-74.7321#map=16/5.9001/-74.7321&amp;layers=C">Ver mapa más grande</a></small>
 
     <!-- End of Map -->
 
@@ -57,27 +57,27 @@
 
               <fieldset class="form-group">
 
-                <legend class="pb-2">Contact form</legend>
+                <legend class="pb-2 lang-text" key="contactForm">Formulario de contacto</legend>
 
                 <div class="form-group">
-                  <label class="form-control-label sr-only" for="ownername">Name</label>
-                  <input class="form-control" type="text" id="ownername" placeholder="Your name">
+                  <label class="form-control-label sr-only lang-text" key="name" for="ownername">Nombre</label>
+                  <input class="form-control lang-placeholder" key="enterName" type="text" id="ownername" placeholder="Tu nombre">
                 </div> <!-- form-group -->
 
                 <div class="form-group">
-                  <label class="form-control-label sr-only" for="owneremail">Email address</label>
-                  <input class="form-control" type="email" id="owneremail" aria-describedby="email"
-                    placeholder="Your email">
+                  <label class="form-control-label sr-only lang-text" key="emailAddress" for="owneremail">Correo electrónico</label>
+                  <input class="form-control lang-placeholder" key="enterEmail" type="email" id="owneremail" aria-describedby="email"
+                    placeholder="Tu correo">
                 </div> <!-- form-group -->
 
                 <div class="form-group">
-                  <label class="form-control-label sr-only" for="subject">Subject</label>
-                  <input class="form-control" type="text" id="subject" aria-describedby="subject" placeholder="Subject">
+                  <label class="form-control-label sr-only" for="subject">Asunto</label>
+                  <input class="form-control lang-placeholder" key="enterSubject" type="text" id="subject" aria-describedby="subject" placeholder="Asunto">
                 </div> <!-- form-group -->
 
                 <div class="form-group">
-                  <label class="form-control-label sr-only" for="yourmessage">Message</label>
-                  <textarea class="form-control" id="yourmessage" rows="3" placeholder="Enter your message"></textarea>
+                  <label class="form-control-label sr-only lang-text" key="message" for="yourmessage">Mensaje</label>
+                  <textarea class="form-control lang-placeholder" key="enterMessage" id="yourmessage" rows="3" placeholder="Ingrese su mensaje"></textarea>
                 </div> <!-- form-group -->
 
                 <button class="btn btn-primary" type="submit">Submit</button>
@@ -99,13 +99,13 @@
         <div class="container pb-5 pl-5">
           <div class="row">
 
-            <h3 class="col-sm-12 pb-2 pl-0">Our Address</h3>
+            <h3 class="col-sm-12 pb-2 pl-0 lang-text" key="ourAddress">Nuestra dirección</h3>
 
             <div>
               <p class="mb-0"><i class="fas fa-map-marker-alt text-primary pr-2"></i> Main Street, 123</p>
-              <p class="pl-4">Nassau, Bahamas</p>
-              <p><i class="fas fa-phone text-primary pr-2"></i>Phone: 3132419195</p>
-              <p><i class="fas fa-envelope text-primary pr-2"></i>Email: madeiradoradal@hotmail.com</p>
+              <p class="pl-4">Doradal, Antioquia, Colombia</p>
+              <p><i class="fas fa-phone text-primary pr-2"></i>3132419195</p>
+              <p><i class="fas fa-envelope text-primary pr-2"></i>madeiradoradal@hotmail.com</p>
             </div>
 
           </div>
@@ -199,7 +199,7 @@
   <!-- End of Book Now Modal -->
 
   <!-- Footer -->
-  <component-foot address="Main Street 123" location="New York, NY, USA" whatsappNumber="573132419195" phoneNumber="3132419195" e-mail="madeiradoradal@hotmail.com"></component-foot>
+  <component-foot address="Main Street 123" location="Doradal, Antioquia, Colombia" whatsappNumber="573132419195" phoneNumber="3132419195" e-mail="madeiradoradal@hotmail.com"></component-foot>
   <!-- End of Footer -->
 
 

@@ -3,12 +3,13 @@ class head extends HTMLElement {
         super();
         var divNavbar = document.createElement("div");
         divNavbar.className = "navbar-nav ml-auto pt-1";
-        divNavbar.appendChild(optionsMenu("nav-item nav-link lang", "index.html", "Inicio", "home", this.getAttribute('home')));
-        divNavbar.appendChild(optionsMenu("nav-item nav-link lang", "about.html", "Nosotros", "about", this.getAttribute('about')));
-        divNavbar.appendChild(optionsMenu("nav-item nav-link lang", "rooms.html", "Habitaciones", "rooms", this.getAttribute('rooms')));
-        divNavbar.appendChild(optionsMenu("nav-item nav-link lang", "blog.html", "Blog", "blog", this.getAttribute('blog')));
-        divNavbar.appendChild(optionsMenu("nav-item nav-link lang", "contact.html", "Contactanos", "contact", this.getAttribute('contact')));
-        divNavbar.appendChild(bookButton("servicesmodal"));
+        divNavbar.appendChild(optionsMenu("nav-item nav-link lang-text", "index.html", "Inicio", "home", this.getAttribute('home')));
+        divNavbar.appendChild(optionsMenu("nav-item nav-link lang-text", "about.html", "Nosotros", "about", this.getAttribute('about')));
+        divNavbar.appendChild(optionsMenu("nav-item nav-link lang-text", "rooms.html", "Habitaciones", "rooms", this.getAttribute('rooms')));
+        divNavbar.appendChild(optionsMenu("nav-item nav-link lang-text", "blog.html", "Blog", "blog", this.getAttribute('blog')));
+        divNavbar.appendChild(optionsMenu("nav-item nav-link lang-text", "contact.html", "Contactanos", "contact", this.getAttribute('contact')));
+        // Boton para abrir modal de reserva
+        //divNavbar.appendChild(bookButton("servicesmodal"));
         var divCollapse = document.createElement("div");
         divCollapse.className = "collapse navbar-collapse";
         divCollapse.id = "myTogglerNav";
@@ -16,7 +17,7 @@ class head extends HTMLElement {
 
         var a = document.createElement("a");
         a.setAttribute ("href", "index.html");
-        a.className = "navbar-brand lang";
+        a.className = "navbar-brand lang-text";
         a.setAttribute ("key", "title");
         a.append("Hotel Madeira");
 

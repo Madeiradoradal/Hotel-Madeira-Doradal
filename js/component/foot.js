@@ -34,7 +34,7 @@ class foot extends HTMLElement {
         form.appendChild(newsletterButton());
 
         var hNewsletter = document.createElement("h3");
-        hNewsletter.className = "font-weight-bold text-uppercase mt-3 mb-4 lang";
+        hNewsletter.className = "font-weight-bold text-uppercase mt-3 mb-4 lang-text";
         hNewsletter.setAttribute("key", "newsletter");
         hNewsletter.append("Boletin informativo");
 
@@ -45,7 +45,7 @@ class foot extends HTMLElement {
         divNewsletter.appendChild(divIcons);
 
         var hBook = document.createElement("h3");
-        hBook.className = "font-weight-bold text-uppercase mt-3 mb-4 lang";
+        hBook.className = "font-weight-bold text-uppercase mt-3 mb-4 lang-text";
         hBook.setAttribute("key", "reservation");
         hBook.append("Reservación");
 
@@ -55,7 +55,7 @@ class foot extends HTMLElement {
         divBook.appendChild(bookDiv(this.getAttribute('phoneNumber'), this.getAttribute('e-mail')));
 
         var hDirection = document.createElement("h3");
-        hDirection.className = "font-weight-bold text-uppercase lang mt-3 mb-4";
+        hDirection.className = "font-weight-bold text-uppercase lang-text mt-3 mb-4";
         hDirection.setAttribute("key", "address");
         hDirection.append("Dirección");
 
@@ -98,7 +98,7 @@ function whatsappIcon(number) {
 
 function directionDiv(address, location) {
     var small = document.createElement("small");
-    small.className = "lang";
+    small.className = "lang-text";
     small.setAttribute("key", "direction");
     small.append("Obtener indicaciones");
 
@@ -123,7 +123,8 @@ function bookDiv(number, mail) {
     var div =  document.createElement("div");
     div.appendChild(phoneLabel(number));
     div.appendChild(mailLabel(mail));
-    div.appendChild(bookButton("servicesmodal"));
+    // Boton para abrir modal de reserva
+    //div.appendChild(bookButton("servicesmodal"));
     return div;
 }
 
@@ -132,7 +133,7 @@ function mailLabel(email) {
     a.setAttribute ("href", `mailto:${email}`);
     a.append(email);
     var label = document.createElement("label");
-    label.className = "lang";
+    label.className = "lang-text";
     label.setAttribute ("key", "email");
     label.append("Correo");
     var p = document.createElement("p");
@@ -147,7 +148,7 @@ function phoneLabel(number) {
     a.setAttribute ("href", `tel::${number}`);
     a.append(number);
     var label = document.createElement("label");
-    label.className = "lang";
+    label.className = "lang-text";
     label.setAttribute ("key", "phone");
     label.append("Telefono");
     var p = document.createElement("p");
@@ -160,7 +161,7 @@ function phoneLabel(number) {
 function bookButton(target) {
     var button = document.createElement("button");
     button.setAttribute("type", "button");
-    button.className = "btn btn-primary pb-2 lang text-uppercase";
+    button.className = "btn btn-primary pb-2 lang-text text-uppercase";
     button.setAttribute("data-toggle", "modal");
     button.setAttribute("data-target", `#${target}`);
     button.setAttribute("key", "bookNow");
@@ -173,17 +174,18 @@ function bookButton(target) {
 
 function newsletterInput() {
     var label = document.createElement("label");
-    label.className = "form-control-label sr-only lang";
+    label.className = "form-control-label sr-only lang-text";
     label.setAttribute("for", "email");
     label.setAttribute("key", "emailAddress");
     label.append("Correo electrónico");
 
     var input = document.createElement("input");
-    input.className = "form-control";
+    input.className = "form-control lang-placeholder";
     input.setAttribute("type", "email");
     input.id = "email";
+    input.setAttribute("key", "enterEmail");
     input.setAttribute("aria-describedby", "email");
-    input.setAttribute("placeholder", "Your email");
+    input.setAttribute("placeholder", "Tu correo");
 
     var div = document.createElement("div");
     div.className = "form-group";
@@ -194,7 +196,7 @@ function newsletterInput() {
 
 function newsletterButton() {
     var button = document.createElement("button");
-    button.className = "btn btn-sm btn-outline-white my-0 lang";
+    button.className = "btn btn-sm btn-outline-white my-0 lang-text";
     button.setAttribute("key", "signUp");
     button.setAttribute("type", "button");
     button.append("Registrarse");
