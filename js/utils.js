@@ -92,10 +92,20 @@ $(function() {
 
 
 Translate = function (lang) {
+
+    localStorage.setItem("lang", lang);
     $(".lang-text").each(function (index, element) {
         $(this).text(arrLang[lang][$(this).attr("key")]);
     });
     $(".lang-placeholder").each(function (index, element) {
         $(this).attr('placeholder', arrLang[lang][$(this).attr("key")]);
     });
+}
+
+Language = function (browserLang) {
+    let storageLang = localStorage.getItem("lang");
+    if(storageLang)
+        return storageLang;
+    else
+        return browserLang;
 }
