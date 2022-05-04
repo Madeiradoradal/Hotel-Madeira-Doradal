@@ -161,7 +161,7 @@ function phoneLabel(number) {
 function bookButton(target) {
     var button = document.createElement("button");
     button.setAttribute("type", "button");
-    button.className = "btn btn-primary pb-2 lang-text text-uppercase";
+    button.className = "bn30 mb-5 pb-2 lang-text text-uppercase";
     button.setAttribute("data-toggle", "modal");
     button.setAttribute("data-target", `#${target}`);
     button.setAttribute("key", "bookNow");
@@ -196,7 +196,7 @@ function newsletterInput() {
 
 function newsletterButton() {
     var button = document.createElement("button");
-    button.className = "btn btn-sm btn-outline-white my-0 lang-text";
+    button.className = "btn btn-sm btn-outline-white my-0 lang-text bn30 mb-5";
     button.setAttribute("key", "signUp");
     button.setAttribute("type", "button");
     button.append("Registrarse");
@@ -234,7 +234,7 @@ function ownerCopyright(href, name, year, first) {
 
 function optionsLang(id, value) {
     var button = document.createElement("button");
-    button.className = "translate";
+    button.className = "translate bn30";
     button.id = id;
     button.append(value);
     return button;
